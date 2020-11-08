@@ -11,7 +11,7 @@ const sample = Sample({
 });
 
 sample.then((core) => {
-    console.log(core.add(1, 2));
+    console.log("ADD FROM CPP",core.add(1, 2));
 });
 
 ReactDOM.render(

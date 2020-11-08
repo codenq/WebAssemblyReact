@@ -4,8 +4,10 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "webpack-dev-server --hot",
-        "build": "webpack"
+        "build:emscripten": "docker run --rm -v $(pwd):/src emscripten/emsdk  ./build.sh",
+        "build:app": "webpack",
+        "build": "npm run build:emscripten && npm run build:app",
+        "start": "webpack-dev-server --hot"
     },
     "keywords": [],
     "author": "",
