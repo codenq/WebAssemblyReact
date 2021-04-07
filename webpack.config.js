@@ -6,6 +6,7 @@ module.exports = {
     externals: {
         fs: 'empty',
     },
+    mode: 'development',
     module: {
         rules: [
             {
